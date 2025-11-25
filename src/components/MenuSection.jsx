@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import MenuCard from './MenuCard';
 import './MenuSection.css';
 
@@ -15,6 +16,8 @@ function MenuSection({ section }) {
               key={itemIndex}
               name={item.name}
               description={item.description}
+              price={item.price}
+              level={4}
             />
           ))}
         </div>
@@ -27,6 +30,8 @@ function MenuSection({ section }) {
                   key={itemIndex}
                   name={item.name}
                   description={item.description}
+                  price={item.price}
+                  level={5}
                 />
               ))}
             </div>
@@ -47,9 +52,9 @@ function MenuSection({ section }) {
           <p className="section-note">{section.note}</p>
         )}
       </div>
-      
+
       <div className="menu-categories">
-        {section.categories && section.categories.map((category, index) => 
+        {section.categories && section.categories.map((category, index) =>
           renderCategory(category, index)
         )}
       </div>
@@ -58,4 +63,30 @@ function MenuSection({ section }) {
 }
 
 export default MenuSection;
+
+MenuSection.propTypes = {
+  section: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string,
+    note: PropTypes.string,
+    categories: PropTypes.arrayOf(PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      note: PropTypes.string,
+      items: PropTypes.arrayOf(PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        description: PropTypes.string,
+        price: PropTypes.string
+      })),
+      subcategories: PropTypes.arrayOf(PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        items: PropTypes.arrayOf(PropTypes.shape({
+          name: PropTypes.string.isRequired,
+          description: PropTypes.string,
+          price: PropTypes.string
+        }))
+      }))
+    }))
+  }).isRequired
+};
 
