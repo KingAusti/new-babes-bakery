@@ -1,0 +1,135 @@
+.hours-section {
+  padding: var(--spacing-2xl) var(--spacing-md);
+  background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary-dark) 100%);
+  color: var(--color-white);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hours-container {
+  text-align: center;
+}
+
+.hours-title {
+  font-size: 2.5rem;
+  color: var(--color-white);
+  margin-bottom: var(--spacing-sm);
+  font-family: var(--font-primary);
+}
+
+.hours-subtitle {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: var(--spacing-xl);
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.hours-content {
+  max-width: 600px;
+  margin: 0 auto var(--spacing-xl);
+}
+
+.hours-info {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-md);
+  backdrop-filter: blur(10px);
+}
+
+.hours-service-type {
+  font-size: 1.3rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.hours-service-type strong {
+  color: var(--color-accent);
+  font-size: 1.4rem;
+}
+
+.hours-days {
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing-sm);
+  font-weight: 500;
+}
+
+.hours-time {
+  font-size: 1.3rem;
+  margin-bottom: var(--spacing-md);
+  font-weight: 600;
+}
+
+.hours-note {
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: var(--spacing-lg);
+  opacity: 0.9;
+}
+
+.hours-phone {
+  font-size: 1.5rem;
+  margin-top: var(--spacing-md);
+}
+
+.hours-phone a {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transition-base);
+}
+
+.hours-phone a:hover {
+  color: var(--color-white);
+  text-decoration: underline;
+}
+
+.hours-cta-button {
+  display: inline-block;
+  background-color: var(--color-white);
+  color: var(--color-secondary);
+  padding: var(--spacing-sm) var(--spacing-xl);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all var(--transition-base);
+  text-decoration: none;
+}
+
+.hours-cta-button:hover {
+  background-color: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+@media (min-width: 768px) {
+  .hours-section {
+    padding: var(--spacing-2xl) var(--spacing-lg);
+  }
+  
+  .hours-title {
+    font-size: 3rem;
+  }
+  
+  .hours-subtitle {
+    font-size: 1.25rem;
+  }
+  
+  .hours-service-type strong {
+    font-size: 1.6rem;
+  }
+  
+  .hours-days {
+    font-size: 1.3rem;
+  }
+  
+  .hours-time {
+    font-size: 1.5rem;
+  }
+  
+  .hours-phone {
+    font-size: 1.75rem;
+  }
+}
+

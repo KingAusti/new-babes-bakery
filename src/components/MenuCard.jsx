@@ -2,12 +2,12 @@ import './MenuCard.css';
 
 function MenuCard({ name, description }) {
   return (
-    <div className="menu-card">
+    <article className="menu-card" aria-label={`Menu item: ${name}`}>
       <h3 className="menu-card-title">{name}</h3>
       {description && (
         <p className="menu-card-description">{description}</p>
       )}
-    </div>
+    </article>
   );
 }
 

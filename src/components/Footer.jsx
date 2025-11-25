@@ -2,7 +2,7 @@ import './Footer.css';
 
 function Footer() {
   return (
-    <footer className="footer" id="hours">
+    <footer className="footer">
       <div className="footer-container">
         <div className="footer-section">
           <h3>Babe's Bakery</h3>
