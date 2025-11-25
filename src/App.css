@@ -1,0 +1,43 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding-top: 80px; /* Account for fixed header */
+}
+
+.hero-section {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: var(--color-white);
+  padding: var(--spacing-2xl) var(--spacing-md);
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.hero-section h1 {
+  font-size: 2rem;
+  color: var(--color-white);
+  margin-bottom: var(--spacing-sm);
+}
+
+.hero-section p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+@media (min-width: 768px) {
+  .hero-section {
+    padding: var(--spacing-2xl) var(--spacing-lg);
+  }
+  
+  .hero-section h1 {
+    font-size: 3rem;
+  }
+  
+  .hero-section p {
+    font-size: 1.25rem;
+  }
+}
